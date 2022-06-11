@@ -5,9 +5,14 @@ from flask import Flask, render_template, redirect, url_for
 from flask_pymongo import PyMongo
 #use the scraping code, we will convert from Jupyter notebook to Python
 import Scraping
+import os
+from flask import send_from_directory
 
 #set up Flask
 app = Flask(__name__)
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
 #Use flask_pymongo to set up mongo connection
 #tells Python that our app will connect to Mongo using a URI, 
 # a uniform resource identifier similar to a URL.

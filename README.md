@@ -1,5 +1,5 @@
-###Mission To Mars
-##Objective
+# Mission To Mars
+## Objective
 Create a website through web scaraping to get the latest data for the planet Mars.
 The information obtained is:
 - Latest Mars News from https://redplanetscience.com/
